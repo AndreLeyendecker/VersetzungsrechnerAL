@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Versetzungsrechner</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    
+    
+        <h1>
+            Versetzungsrechener
+        </h1>
+        <div id="Einleitung">
+            Hallo und Herzlich Willkommen bei dem Versetzungsrechner für das berufliche Gymnasium der BBS Montabaur. <p>
+            Dieser Rechner ist für die Versetzung, der beiden Fachrichtungen "Wirtschaft" und "Gesundheit/Soziales", von der 11ten in die 12te Klasse ausgelegt. <p>
+            Zur Verwendung müssen Sie Ihre Noten bei den jeweiligen Fächer auswählen.
+            Wenn Sie in den Fächer "Chemie, Physik oder Biologie",
+            beziehungsweise in den fachrichtungsspezifischen Fächer "Volkswirtschaftslehre, Pädagogik oder Psychologie" über keine Note verfügen,
+            wählen Sie bitte die Option "N/A" aus. <p>
+            Ich wünsche Ihnen viel Erfolg.
+        </div>
+        <!--
+        Alle Fächer sind in zwei Tabellen eingeteilt (eine für KF und eine für GF) und die Fächer können über "select-option" Werte von 0-6 annehme.
+        Der Standardwert ist 4. Jedes Fach hat seinen Namen als ID und wird darüber dann später angesprochen.
+        -->
+        <table>
+			<tr>
+                <th>
+                    Deutsch<p>
+                    <select id="Deutsch"> 
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+                <th>
+                    Englisch<p>
+                    <select id="Englisch">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+                <th>
+                    Mathe<p>
+                    <select id="Mathe">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+                <th>
+                    BWL/RW oder Gesundheit/Soziales <p>
+                    <select id="Berufsfach">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+			</tr> 	
+        </table>
+    <p>   
+        <table>
+			<tr>
+                <th>
+                    Chemie<p>
+                    <select id="Chemie">
+                        <option value="0">N/A</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+                <th>
+                    Physik<p>
+                    <select id="Physik">
+                        <option value="0">N/A</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+                <th>
+                    Biologie<p>
+                    <select id="Biologie">
+                        <option value="0">N/A</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+                <th>
+                    Informationsverarbeitung <p>
+                    <select id="Informationsverarbeitung">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>         
+			</tr>
+			<tr>
+                <th>
+                    Französisch/Spanisch <p>
+                    <select id="Fremdsprache"> 
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+                <th>
+                    Gemeinschaftskunde <p>
+                    <select id="Gemeinschaftskunde"> 
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+                <th>
+                    Religion/Ethik <p>
+                    <select id="Religion"> 
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+                <th>
+                    Sport <p>
+                    <select id="Sport"> 
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+			</tr>
+			<tr>
+                <th>
+                    Volkswirtschaftslehre <p>
+                    <select id="Volkswirtschaftslehre">
+                        <option value="0">N/A</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+                <th>
+                    Pädagogik <p>
+                    <select id="Pädagogik">
+                        <option value="0">N/A</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+                <th>
+                    Psychologie <p>
+                    <select id="Psychologie">
+                        <option value="0">N/A</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4" selected>4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
+                </th>
+				<th>
+					<input type="button" value="Auswerten" onclick="rechnen();"> <!-- Die Funktion "rechnen" wird bei Knopfduck von "Auswerten" ausgeführt*/ -->
+				</th>
+			</tr>
+        </table>
+    <p>
+        <div id="Versetzung"></div> <!-- In diesen div-Kontainer wird später eine Nachricht von der Funktion "rechnen" eingefügt (versetzt oder nicht versetzt)*/ -->
+        <p>
+        <div id="Notendurchschnitt"></div> <!-- In diesen div-Kontainer wird später der Notendruchschnitt eingefügt*/ -->
+        
+        
+        <script>
+            var Faecher = 0; /*Variable für die Anzahl der Fächer*/
+            var EinsK = 0; /*Variable für die Anzahl der 1en in den Kernfächern*/            
+            var EinsG = 0; /*Variable für die Anzahl der 1en in den Grundfächern*/ 
+            var ZweiK = 0; /*Variable für die Anzahl der 2en in den Kernfächern*/  
+            var ZweiG = 0; /*Variable für die Anzahl der 2en in den Grundfächern*/
+            var DreiK = 0; /*Variable für die Anzahl der 3en in den Kernfächern*/ 
+            var DreiG = 0; /*Variable für die Anzahl der 3en in den Grundfächern*/
+            var FünfK = 0; /*Variable für die Anzahl der 5en in den Kernfächern*/
+            var FünfG = 0; /*Variable für die Anzahl der 5en in den Grundfächern*/
+            var SechsK = 0; /*Variable für die Anzahl der 6en in den Kernfächern*/
+            var SechsG = 0; /*Variable für die Anzahl der 6en in den Grundfächern*/
+            var FünfKA = 0; /*Variable: 5 im Kernfach ausgleich*/
+            var SGZA = 0; /*Variable: eine Sechs im GF mit 2en ausgleichen*/
+            
+            /*
+            Folgende 12 Funktionen werden durch die Variablen der Fächer (De, En, Ma, usw.) aktiviert (da diese Funtionen bei den Variablen namentlich angesprochen werden).
+            Hinter dem Funktionnamen (bei den Fächervariabelen) steht in Klammern z.B. (De).
+            Damit wird nun das Wort "test" in den untenstehen Funktionen durch den jweiligen Wert der Fächervariable ersetzt.
+            Beispielsweise setzt bei "searchZero" jedes Fach sein aktuellen Wert an die Stelle von "test" (natrülich nacheinander und nicht gleichzeitig) ein.
+            Und die Funktion überprüft dann ob der Wert größer als Null ist. Wenn ja wird die Variable "Faecher" um eins hochgezählt.
+            Wenn nicht (das Fach wurde mit "N/A", also Wert 0 angegeben) wird nichts hochgezählt. Somit hat man am Ende die genaue Anzahl der Fächer.
+            Die übrigen 11 Funktionen funktioniern genauso.
+            */
+            function searchZero(test){
+                if (test > 0) {
+                    Faecher++;
+                }
+            }
+            function searchOneK(test){
+                if (test === 1) {
+                    EinsK++;
+                }
+            }
+            function searchOneG(test){
+                if (test === 1) {
+                    EinsG++;
+                }
+            }
+            function searchTwoK(test){
+                if (test === 2) {
+                    ZweiK++;
+                }
+            }
+            function searchTwoG(test){
+                if (test === 2) {
+                    ZweiG++;
+                }
+            }
+            function searchThreeK(test){
+                if (test === 3) {
+                    DreiK++;
+                }
+            }
+            function searchThreeG(test){
+                if (test === 3) {
+                    DreiG++;
+                }
+            }
+            function searchFiveK(test){
+                if (test === 5) {
+                    FünfK++;
+                }
+            }
+            function searchFiveG(test){
+                if (test === 5) {
+                    FünfG++;
+                }
+            }
+            function searchSixK(test){
+                if (test === 6) {
+                    SechsK++;
+                }
+            }
+            function searchSixG(test){
+                if (test === 6) {
+                    SechsG++;
+                }
+            }
+            function FünfKEZA(test){
+                if (test === 1)
+                    FünfKA++;
+            }
+            
+            /*Die Funktion "rechnen" ist was mit dem Knopfdruck von "Auswerten" gestartet wird. In ihr werden alle anderen Funktionen ganz automatisch ohne weitere Eingabe aktiviert. Sie ist das Herz meines Versetzungsrechners und beinhaltet alle Bedingungen dafür*/
+
+            function rechnen(){
+               /*Die Variablen werden erstmal wieder auf Null zurückgesetzt, da es sonst bei mehrmaligen Auswerten zu Fehlern kommen kann (sie behalten sonst ihren hochgezählen Wert bei)*/
+                Faecher = 0;
+                EinsK = 0;
+                EinsG = 0;
+                ZweiK = 0;
+                ZweiG = 0;
+                DreiK = 0;
+                DreiG = 0;
+                FünfK = 0;
+                FünfG = 0;
+                SechsK = 0;
+                SechsG = 0;
+                FünfKA = 0;
+                SGZA = 0;
+               
+                /*
+                Hier wird jedes Fach zu einer Variable, aus dem man mit "Number" und "Value" nutzbare Zahlen und die ausgewählten Werte(die Noten)erhält.
+                Mit "document.getElementById("DasFach") such sich die Variable das jweilige Fach (mit der passenden ID) raus und nimmt die Werte an.
+                "searchZero/One/Two...(DieJeweiligeVariable)" übergibt den aktuellen Wert der Variable(z.B. von Deutsch(De)) an die Funktion (z.B. searchZero), welche dann je nach Wert eine andere Variable (z.B. EinsK) um eins erhöht.
+                */
+                var De = Number(document.getElementById("Deutsch").value);
+                    searchZero(De);searchOneK(De);searchTwoK(De);searchThreeK(De);searchFiveK(De);searchSixK(De);FünfKEZA(De);
+                var En = Number(document.getElementById("Englisch").value);
+                    searchZero(En);searchOneK(En);searchTwoK(En);searchThreeK(En);searchFiveK(En);searchSixK(En);FünfKEZA(En);
+                var Ma = Number(document.getElementById("Mathe").value);
+                    searchZero(Ma);searchOneK(Ma);searchTwoK(Ma);searchThreeK(Ma);searchFiveK(Ma);searchSixK(Ma);FünfKEZA(Ma);
+                var Bu = Number(document.getElementById("Berufsfach").value);
+                    searchZero(Bu);searchOneK(Bu);searchTwoK(Bu);searchThreeK(Bu);searchFiveK(Bu);searchSixK(Bu);FünfKEZA(Bu);
+                var Ch = Number(document.getElementById("Chemie").value);
+                    searchZero(Ch);searchOneG(Ch);searchTwoG(Ch);searchThreeG(Ch);searchFiveG(Ch);searchSixG(Ch);
+                var Ph = Number(document.getElementById("Physik").value);
+                    searchZero(Ph);searchOneG(Ph);searchTwoG(Ph);searchThreeG(Ph);searchFiveG(Ph);searchSixG(Ph);
+                var Bi = Number(document.getElementById("Biologie").value);
+                    searchZero(Bi);searchOneG(Bi);searchTwoG(Bi);searchThreeG(Bi);searchFiveG(Bi);searchSixG(Bi);
+                var In = Number(document.getElementById("Informationsverarbeitung").value);
+                    searchZero(In);searchOneG(In);searchTwoG(In);searchThreeG(In);searchFiveG(In);searchSixG(In);
+                var Fr = Number(document.getElementById("Fremdsprache").value);
+                    searchZero(Fr);searchOneG(Fr);searchTwoG(Fr);searchThreeG(Fr);searchFiveG(Fr);searchSixG(Fr);
+                var Ge = Number(document.getElementById("Gemeinschaftskunde").value);
+                    searchZero(Ge);searchOneG(Ge);searchTwoG(Ge);searchThreeG(Ge);searchFiveG(Ge);searchSixG(Ge);
+                var Re = Number(document.getElementById("Religion").value);
+                    searchZero(Re);searchOneG(Re);searchTwoG(Re);searchThreeG(Re);searchFiveG(Re);searchSixG(Re);
+                var Sp = Number(document.getElementById("Sport").value);
+                    searchZero(Sp);searchOneG(Sp);searchTwoG(Sp);searchThreeG(Sp);searchFiveG(Sp);searchSixG(Sp);
+                var Vo = Number(document.getElementById("Volkswirtschaftslehre").value);
+                    searchZero(Vo);searchOneG(Vo);searchTwoG(Vo);searchThreeG(Vo);searchFiveG(Vo);searchSixG(Vo);
+                var Pä = Number(document.getElementById("Pädagogik").value);
+                    searchZero(Pä);searchOneG(Pä);searchTwoG(Pä);searchThreeG(Pä);searchFiveG(Pä);searchSixG(Pä);
+                var Ps = Number(document.getElementById("Psychologie").value);
+                    searchZero(Ps);searchOneG(Ps);searchTwoG(Ps);searchThreeG(Ps);searchFiveG(Ps);searchSixG(Ps);
+                
+                var ZW = (De+En+Ma+Bu+Ch+Ph+Bi+In+Fr+Ge+Re+Sp+Vo+Pä+Ps); /*hier werden alle Noten, aller Fächer zusammengerechnet*/
+                var Ergebnis = ZW/Faecher; /*hier wird das Ergebnis von ZW durch die Anzahl der gezählen Fächer (durch die Variable "Faecher") gerechnet, damit haben wir unseren Notendurchnitt*/
+               
+                /* Die folgenden 6 "if"-Bedingungen werden für den Fall: "Fünf im KF ausgleichen und Eine 5 im KF und eine 6 im GF" benötigt */
+                
+                if  (ZweiG > 1){ /*wenn mehr als eine 2 bei den Grundfächern vorhanden ist, wird die Variable SGZA um eins hochgezählt*/
+                     SGZA++;
+                }
+                if  (FünfK > 0){ /*Wenn mindestens eine 5 bei den Kernfächern vorhanden ist, wird von der Variable FünfKa eins abgezogen*/ 
+                     FünfKA--;
+                }
+                if (DreiK > 1){ /*Wenn mehr als eine 3 bei den Kernfächern vorhanden ist, wird die Variable FünfKA um eins erhöht*/
+                    FünfKA++;
+                }
+                if (ZweiK > 0){ /*Wenn mindestens eien 2 bei den Kernfächern vorhanden ist, wird der die Variable FünfKa um ein erhöht*/
+                    FünfKA++;
+                }
+                if (ZweiK === 3){ /*Wenn drei 2en bei den Kerfächern vorhadnen sind, wird die Variable FünfKA um eins erhöht*/
+                    FünfKA++;
+                }
+                if ((ZweiK + ZweiG) > 2){ /*Wenn mehr als zwei 2en in Gund- und Kernfächern vorhanden sind wird die Variable FGZA um eins erhöht*/
+                    SGZA++;
+                }
+                    
+                /*
+                Wenn mindestens eine der folgenden Bedingunen erfüllt wird, wird man nicht versetzt. Ansonsten hat man den Schnitt erreicht, beziehungweise für Ausgleich gesorgt
+                Es war einfacher die Fälle der nicht Versetzung anzugeben, da es deutlich weniger Bedingungen sind, als bei der Versetzung.
+                */
+                if  (
+                    (SechsK > 0) || /*wenn eine oder mehr 6en im KF vorhanden sind, wird man nicht versetzt*/
+                    (FünfK > 1) || /*wenn mehr als eine Fünf im KF vorhanden ist, wird man nicht versetzt*/
+                    (FünfK === 1 && FünfKA < 0) || /*wenn die Fünf im KF nicht ausgeglichen wird, wird man nicht versetzt*/
+                    (SechsG > 1) || /*wenn man mehr als eine 6 im Grundfach hat, wird man nicht versetzt*/
+                    ((FünfG + FünfK + SechsG) > 2) || /* wenn mehr als zwei 5/6en insgesamt vorhanden sind, wird man nicht versetzt*/
+                    (FünfG === 2 && ((EinsG + EinsK + ZweiG + ZweiK) === 0) && ((DreiG + DreiK) < 2)) || /*die zweite 5 im GF wird nicht ausgeglichen (man wird nicht versetzt)*/
+                    (SechsG === 1 && ((EinsG + EinsK) === 0) && ((ZweiG + ZweiK) < 2)) || /*die 6 im GF wird nicht ausgeglichen (man wird nicht versetzt)*/
+                    (FünfK === 1 && SechsG === 1 && ((FünfKA + EinsG + SGZA) < 1))  /*eine Fünf im KF und eine 6 im Nebenfach wird nicht ausgeglichen (man wird nicht versetzt)*/
+                    ){
+                    document.getElementById("Versetzung").innerHTML = 'Es tut mir Leid, Sie werden nicht versetzt.';
+                } else {
+                    document.getElementById("Versetzung").innerHTML = 'Herzlichen Glückwunsch, Sie werden versetzt.';
+                }
+                document.getElementById("Notendurchschnitt").innerHTML = 'Ihr Notendurchschnitt beträgt: ' + Ergebnis;              
+            }
+        </script>  
+</html>
